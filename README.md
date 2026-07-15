@@ -72,15 +72,14 @@ Facebook-Clone/
 ## ▶️ Getting Started
 
 ### Clone the repository
+https://abd-elsamad.github.io/faceBook-clone/
 
 
 
 No frameworks, libraries, or dependencies are required.
 
 ## 🌐 Live Preview
-
-Add your deployed project link here.
-
+https://face-book-clone-indol.vercel.app/
 
 
 ## 🎯 Purpose

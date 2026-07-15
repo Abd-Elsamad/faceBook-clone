@@ -1,0 +1,301 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f0f2f5;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 30px;
+    background:white;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    color:#1877f2;
+    font-size:30px;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.nav-left input{
+    padding:10px;
+    width:250px;
+    border:none;
+    border-radius:20px;
+    background:#eee;
+}
+
+.nav-center{
+    display:flex;
+    gap:40px;
+}
+
+.nav-item{
+    font-size:28px;
+    cursor:pointer;
+    padding:10px 20px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.nav-item:hover{
+    background:#eee;
+}
+
+/* Layout */
+
+.container{
+    width:95%;
+    margin:20px auto;
+    display:grid;
+    grid-template-columns:250px 1fr 250px;
+    gap:20px;
+}
+
+/* Sidebars */
+
+.left-sidebar,
+.right-sidebar{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    height:fit-content;
+    box-shadow:0 0 5px rgba(0,0,0,.1);
+}
+
+.left-sidebar p,
+.right-sidebar p{
+    padding:10px 0;
+    cursor:pointer;
+}
+
+.left-sidebar p:hover,
+.right-sidebar p:hover{
+    background:#eee;
+    border-radius:5px;
+}
+
+/* Feed */
+
+.feed{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* Create Post */
+
+.create-post{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 5px rgba(0,0,0,.1);
+}
+
+.user-name,
+.post-input{
+    width:100%;
+    margin-bottom:10px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.post-input{
+    resize:none;
+    height:100px;
+}
+
+.post-btn{
+    width:100%;
+    padding:12px;
+    background:#1877f2;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.post-btn:hover{
+    background:#166fe5;
+}
+
+/* Posts */
+
+.post{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 5px rgba(0,0,0,.1);
+}
+
+.post h4{
+    margin-bottom:10px;
+}
+
+.post p{
+    margin-bottom:15px;
+}
+
+.post-footer{
+    display:flex;
+    justify-content:space-around;
+    border-top:1px solid #ddd;
+    padding-top:10px;
+}
+
+.post-footer button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.post-footer button:hover{
+    color:#1877f2;
+}
+/* ========================= */
+/* Responsive Design */
+/* ========================= */
+
+/* Tablets */
+
+@media (max-width:992px){
+
+    .container{
+        grid-template-columns:200px 1fr;
+    }
+
+    .right-sidebar{
+        display:none;
+    }
+
+    .nav-left input{
+        width:170px;
+    }
+
+    .nav-center{
+        gap:20px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .nav-left{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .nav-left input{
+        width:100%;
+    }
+
+    .nav-center{
+        width:100%;
+        justify-content:space-around;
+    }
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .left-sidebar,
+    .right-sidebar{
+        display:none;
+    }
+
+    .feed{
+        width:100%;
+    }
+
+    .create-post{
+        padding:15px;
+    }
+
+    .post{
+        padding:15px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+    .logo{
+        font-size:26px;
+    }
+
+    .nav-item{
+        font-size:22px;
+        padding:8px;
+    }
+
+    .user-name,
+    .post-input,
+    .post-btn{
+        font-size:14px;
+    }
+
+    .post-footer{
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+    }
+
+}
+#darkMode{
+    padding:8px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#1877f2;
+    color:white;
+}
+
+.dark{
+    background:#18191a;
+    color:white;
+}
+
+.dark .navbar,
+.dark .left-sidebar,
+.dark .right-sidebar,
+.dark .create-post,
+.dark .post{
+    background:#242526;
+    color:white;
+}
+
+.dark input,
+.dark textarea{
+    background:#3a3b3c;
+    color:white;
+    border:none;
+}
